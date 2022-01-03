@@ -1,0 +1,324 @@
+[
+ {
+  "id": 1,
+  "title": "PIZZINI REGLA ESCOLAR PASTEL 15 CM",
+  "price": 53,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi.",
+  "image": [
+   "regla.jpg",
+   "regla.jpg",
+   "regla.jpg",
+   "regla.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 2,
+  "title": "VOLIGOMA ADHESIVO VOLIBARRA 10 GRS ADHESIVO",
+  "price": 187,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "voligoma.jpg",
+   "voligoma.jpg",
+   "voligoma.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 3,
+  "title": "MAPED SACAPUNTAS BOOGY REGLAS/GOMAS/SACAPUNTAS",
+  "price": 35,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "sacapuntas.jpg",
+   "sacapuntas.jpg",
+   "sacapuntas.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 4,
+  "title": "BIC EVOLUTION LAPIZ NEGRO ESCRITURA ESCOLAR",
+  "price": 46,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi.",
+  "image": [
+   "lapizbic.jpg",
+   "lapizbic.jpg",
+   "lapizbic.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 5,
+  "title": "MOOVING MOCHILA COMO QUIERES BOGGS",
+  "price": 4386,
+  "category": "novedades",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi.",
+  "image": [
+   "mochila.jpg",
+   "mochila.jpg",
+   "mochila.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 6,
+  "title": "FILGO ACUARELAS ESCOLAR X 12 ARTE ESCOLAR",
+  "price": 232,
+  "category": "novedades",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi.",
+  "image": [
+   "acuarelas.jpg",
+   "acuarelas.jpg",
+   "acuarelas.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 7,
+  "title": "ALFA BLOCK DE 80 HOJAS A5 RAYADO CUADERNOS",
+  "price": 297,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi.",
+  "image": [
+   "hojasBlock.jpg",
+   "hojasBlock.jpg",
+   "hojasBlock.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 8,
+  "title": "LIQUID PAPER CORRECTOR ESCRITURA",
+  "price": 100,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "corrector.jpg",
+   "corrector.jpg",
+   "corrector.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 9,
+  "title": "GIOTTO LAPICES DE COLORES X 24 ESCRITURA ESCOLAR",
+  "price": 1368,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "colores.jpg",
+   "colores.jpg",
+   "colores.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 10,
+  "title": "MOOVING CARTUCHERA METALIZADA MICKEY CARTUCHERAS",
+  "price": 862,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "cartucheraMickey.jpg",
+   "cartucheraMickey.jpg",
+   "cartucheraMickey.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 11,
+  "title": "CALCULADORA CASIO FX-666",
+  "price": 100,
+  "category": "novedades",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "calculadora1.png",
+   "calculadora2.png",
+   "calculadora3.png",
+   "calculadora4.png"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 12,
+  "title": "CARTUCHERA NEGRA ECONÓMICA",
+  "price": 200,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "cartuchera.jpg",
+   "cartuchera.jpg",
+   "cartuchera.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 13,
+  "title": "CARTUCHERA MORADA STYLE MOOVING",
+  "price": 399,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "cartuchera1.jpg",
+   "cartuchera1.jpg",
+   "cartuchera1.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 14,
+  "title": "HOJAS EL NENE 15x15",
+  "price": 540,
+  "category": "novedades",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "hojas.jpg",
+   "hojas.jpg",
+   "hojas.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 15,
+  "title": "LAPICERA SHARPIE NEGRO 4 UNIDADES",
+  "price": 400,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "lapicera.jpg",
+   "lapicera.jpg",
+   "lapicera.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 16,
+  "title": "MARCADORES ARTISTICO DUAL BRUSH",
+  "price": 320,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "marcadores.jpg",
+   "marcadores.jpg",
+   "marcadores.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 17,
+  "title": "MARCADORES PUNTA PINCEL PASTEL MOOVING",
+  "price": 200,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi.",
+  "image": [
+   "marcadoresPastel.jpg",
+   "marcadoresPastel.jpg",
+   "marcadoresPastel.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 18,
+  "title": "TIJERAS BRW 13cm",
+  "price": 120,
+  "category": "ofertas",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "tijeras.jpg",
+   "tijeras.jpg",
+   "tijeras.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 19,
+  "title": "LEDESMA CUADERNO A4 AVON RAYADO CUADERNOS",
+  "price": 276,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "cuadernosAvon.jpg",
+   "cuadernosAvon.jpg",
+   "cuadernosAvon.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ },
+ {
+  "id": 20,
+  "title": "PLASTICOLA 250 GRS. ADHESIVO",
+  "price": 317,
+  "category": "destacados",
+  "description": "In efficitur suscipit felis vel mollis. Duis laoreet semper sapien in rhoncus. Mauris id porttitor nisi. ",
+  "image": [
+   "plasticola.jpg",
+   "plasticola.jpg",
+   "plasticola.jpg"
+  ],
+  "marca": "",
+  "tipo": "",
+  "modelo": "",
+  "material": ""
+ }
+]

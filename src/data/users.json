@@ -1,0 +1,38 @@
+[
+ {
+  "id": 1,
+  "nombre": "dsaa",
+  "apellido": "dsaa",
+  "contraseña": "hola1234",
+  "mail": "dsaa@sadsa",
+  "telefono": "12131231",
+  "categoria": "cliente"
+ },
+ {
+  "id": 2,
+  "nombre": "dsaa",
+  "apellido": "dsaa",
+  "contraseña": "hola1234",
+  "mail": "dsaa@sadsa",
+  "telefono": "12131231",
+  "categoria": "cliente"
+ },
+ {
+  "id": 3,
+  "nombre": "dsaa",
+  "apellido": "dsaa",
+  "contraseña": "hola1234",
+  "mail": "dsaa@sadsa",
+  "telefono": "12131231",
+  "categoria": "admin"
+ },
+ {
+  "id": 4,
+  "nombre": "dsaa",
+  "apellido": "dsaa",
+  "contraseña": "hola1234",
+  "mail": "dsaa@sadsa",
+  "telefono": "12131231",
+  "categoria": "cliente"
+ }
+]

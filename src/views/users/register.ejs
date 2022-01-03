@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesHeader-Footer.css">
+    <link rel="stylesheet" href="/css/stylesRegister.css">
+</head>
+<body>
+    <%- include('../partials/header') %> 
+    <main class="register">
+        <div>
+        <form action="/register" method="post" class="continuar">
+             <h3>Registrate</h3>
+            <h4> <i class="fas fa-user-circle"></i> Datos Personales<br></h4>
+            <div >
+                <input class="dato" type="text" name="nombre" id="nombre" minlength="6" placeholder="Nombre" required> 
+            </div>
+            <div >
+                <input class="dato"type="text" name="apellido" id="apeliido" minlength="3" placeholder="Apellido" required>  
+            </div >
+            <div>
+                <input class="dato"type="text" name="telefono" id="telefono" minlength="6" placeholder="Telefono movil" required> 
+            </div>
+            <div >
+                <input class="dato" type="email" name="email" id="email" placeholder="Correo Electronico" required>
+            </div>
+
+            <h4> <i class="fas fa-lock"></i> Contraseña<br></h4>
+            <div > 
+                <input class="dato" type="password" name="contraseña" minlength="6" maxlength="12" id="contraseña" placeholder="Contraseña" required>
+            </div>
+            <div >
+                <input class="dato" type="password" name="contraseña2" minlength="6" maxlength="12" id="contraseña2" placeholder="Confirmar Contraseña" required>
+            </div>
+            <div class = "botones">
+                <button class= "botonRegistro" type="submit"> enviar </button>
+                <button class= "botonRegistro" type="reset"> cancelar </button>
+            </div>
+        </form>
+        </div>
+        <div >
+            <form action="/" method="get" class="continuar">
+                <div class="ingresoA">
+                    <a href="/">Ingresá con Google
+                        <img src="/images/google.svg" alt="" class="googleLogo">
+                    </a>
+                   
+                    </div>
+                    <div class="ingresoB">
+                    <a  href="/">Ingresá con Facebook
+                        <img src="/images/facebook.svg" alt="" class="facebookLogo">
+                    </a>
+                    
+                    </div>
+            </form>
+            <img class= "imagen-fondo" src="/images/image-register.png" alt="">
+            <img class= "imagen-fondo-dark" src="/images/image-register-dark.png" alt="">
+        </div>
+       
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
