@@ -78,6 +78,20 @@ const modelController = function (name) {
             this.writeFile(updatedRows);
         },
 
+        buscardorPorCategoriaIndividual: function(categoria, valor)
+        {
+            let rows = this.readFile();
+            let resultadoBuscado = rows.find( (objeto) =>
+            {
+                return objeto[categoria] === valor; 
+                //Se usa un comparador estricto porque como es un objeto 
+                //literal queremos que el tipo de dato y el valor coincidan 👍
+            }
+            )
+
+            return resultadoBuscado;
+        },
+
         buscardorPorCategoria: function(categoria, valor)
         {
             let rows = this.readFile();

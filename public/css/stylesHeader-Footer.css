@@ -219,14 +219,14 @@ button.enemy{
         box-shadow: 0 3px 6px #B0B8FF;
         transition: all 1s;
     }
-    .login_desplegable_login, .login_desplegable_signup{
+    .login_desplegable_login, .login_desplegable_signup, .login_desplegable_perfil, .login_desplegable_edit, .login_desplegable_close{
         display:block;
         text-align: center;
         text-decoration: none;
         color: #000;
         
     }
-    .login_desplegable_login:hover, .login_desplegable_signup:hover{
+    .login_desplegable_login:hover, .login_desplegable_signup:hover, .login_desplegable_perfil:hover, .login_desplegable_edit:hover, .login_desplegable_close:hover{
         background-color: #e9e7e7;
         
     }
@@ -265,7 +265,12 @@ input.enemy{
         width: 5%;
     }
     .login_desplegable {
-        right: -35px;
+        right: -65px;
+    }
+    .login_desplegable {
+      
+        width: 159px;
+        
     }
     .iconosHeader{
         position: static;

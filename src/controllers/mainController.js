@@ -7,6 +7,7 @@ const mainController = {
         const destacados = productModel.buscardorPorCategoria("category", "destacados");
         const ofertas = productModel.buscardorPorCategoria("category", "ofertas");
         const novedades = productModel.buscardorPorCategoria("category", "novedades");
+        
         res.render("home", {destacados, ofertas, novedades})
     },
 }

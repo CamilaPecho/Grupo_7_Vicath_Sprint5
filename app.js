@@ -1,6 +1,11 @@
 //Solicitamos dependencias instaladas 🎈🎄
 const express = require('express');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
+//Solicitud de middlewares
+const usuarioLogeadoGlobal = require('./src/middlewares/usuarioLogeadoGlobal.js')
 
 //Importamos el sistema de rooteo 😂 
 const main = require("./src/routers/main");
@@ -12,8 +17,14 @@ const products = require("./src/routers/products");
 const app = express();
 
 //Middlewares de aplicación global
+app.use(session({
+    secret: "Limberth Daniel Vasquez Estrada",
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(cookies())
 app.use(express.static('public'));
-
+app.use(usuarioLogeadoGlobal)
 //😊 Con esto configuramos la aplicación para sobrescribir los métodos admitidos por el formulario 😎
 app.use(methodOverride('_method'));
 

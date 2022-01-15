@@ -21,9 +21,17 @@
         </label>
         <input type="checkbox" class="inputCheck" id="clickk">
         <div class="login_desplegable">
-            <span class="login_desplegable_header">Mi cuenta</span>
+            <% if (locals.usuarioHeader) { %>
+                <span class="login_desplegable_header">¡Hola! <%= locals.datosUsuarioGlobal.nombre %> </span>
+            <a href="/profile" class="login_desplegable_perfil">Ver perfil</a><hr>
+            <a href="#" class="login_desplegable_edit">Editar perfil</a><hr>
+            <a href="/logout" class="login_desplegable_close">Cerrar cuenta</a>
+            <% } else{%>
+
+            <span class="login_desplegable_header">¡Elija!</span>
             <a href="/login" class="login_desplegable_login">Iniciar sesión</a><hr>
             <a href="/register" class="login_desplegable_signup">Registrate</a>
+            <% } %> 
         </div>
     </div>
     <div class="iconH" id="iconCuenta">

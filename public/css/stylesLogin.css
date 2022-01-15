@@ -125,6 +125,24 @@
     right: 11%;
 }
 
+/*---------validaciones------------*/
+#usuarioIs-invalid, #contraseñaIs-invalid {
+    margin: 3% 0px;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px;
+    /*padding: 10px;*/
+    box-shadow: -4px 4px 2px #dc3545;
+    display: block;
+    text-align: left;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+.errorValidacion
+{
+    color: #dc3545;
+}
 /*-------tablet-----*/
 
 @media (min-width: 426px){

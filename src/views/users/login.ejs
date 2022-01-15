@@ -16,12 +16,24 @@
                 
                 <div>
                     <h3> <label for="usuario">Usuario</label> </h3>
-                    <input type="email" name="usuario" id="usuario" placeholder="Ingrese su email" required>
+                    <input type="email" name="usuario" id="usuario<%= (locals.errors && errors.usuario) ? 'Is-invalid': null %>" placeholder="Ingrese su email"
+                    value="<%= (locals.oldData) ? oldData.usuario: null %> ">
+                    <% if (locals.errors && errors.usuario) { %>
+                        <div class="errorValidacion">
+                            <%= errors.usuario.msg %> 
+                        </div> 
+                    <% } %>
+                    
                 </div>
 
                 <div>
                     <h3> <label for="contraseña">Contraseña</label> </h3>
-                    <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña" required>
+                    <input type="password" name="contrasenia" id="contraseña<%= (locals.errors && errors.contrasenia) ? 'Is-invalid': null %>" placeholder="Ingrese su contraseña">
+                    <% if (locals.errors && errors.contrasenia) { %>
+                        <div class="errorValidacion">
+                            <%= errors.contrasenia.msg %> 
+                        </div> 
+                    <% } %>
                 </div>
 
                 <div class="texto">
