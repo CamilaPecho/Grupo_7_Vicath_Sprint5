@@ -1,13 +1,16 @@
 const express = require("express");
 const userController = require("../controllers/usersController");
 const router = express.Router();
-const validaciones = require('../middlewares/validateLoginMiddleware.js');
+const validacionesLogin = require('../middlewares/validateLoginMiddleware.js');
+const validacionesRegister = require('../middlewares/validationsRegister.js');
+const avatarProfile = require('../middlewares/imageRegister.js');
+
 
 router.get('/login', userController.viewLogin);
-router.post('/login', validaciones, userController.login)
+router.post('/login', validacionesLogin, userController.login)
 
 router.get('/register', userController.viewRegister);
-router.post('/register', userController.register);
+router.post('/register',avatarProfile.single('avatar'),validacionesRegister, userController.register);
 
 router.get('/profile', userController.verPerfil)
 

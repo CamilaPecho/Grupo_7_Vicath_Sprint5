@@ -1,43 +1,7 @@
 [
  {
-  "id": 1,
-  "nombre": "dsaa",
-  "apellido": "dsaa",
-  "contrasenia": "hola1234",
-  "mail": "dsaa@sadsa",
-  "telefono": "12131231",
-  "categoria": "cliente"
- },
- {
-  "id": 2,
-  "nombre": "dsaa",
-  "apellido": "dsaa",
-  "contrasenia": "hola1234",
-  "mail": "dsaa@sadsa",
-  "telefono": "12131231",
-  "categoria": "cliente"
- },
- {
-  "id": 3,
-  "nombre": "dsaa",
-  "apellido": "dsaa",
-  "contrasenia": "hola1234",
-  "mail": "dsaa@sadsa",
-  "telefono": "12131231",
-  "categoria": "admin"
- },
- {
-  "id": 4,
-  "nombre": "dsaa",
-  "apellido": "dsaa",
-  "contrasenia": "hola1234",
-  "mail": "dsaa@sadsa",
-  "telefono": "12131231",
-  "categoria": "cliente"
- },
- {
     "id": 5,
-    "nombre": "Limberth",
+    "nombre": "Limbert",
     "apellido": "Estrada",
     "contrasenia": "@@@ZyXeL@@@",
     "mail": "lvasquezestrada@frba.utn.edu.ar",

@@ -1,6 +1,7 @@
 const jsonDB = require('../model/jsonDatabase');
 const {validationResult} = require('express-validator');
 const users = jsonDB('users');
+const bcript = require('bcryptjs');
 
 const userController = {
     viewLogin: (req,res) =>{
@@ -18,10 +19,8 @@ const userController = {
     //Ahora voy a validar si existe en la BD y tirar su respectivo error a la vista en caso de acierto
     let usuarioEncontrado = users.buscardorPorCategoriaIndividual('mail', req.body.usuario)
 
-   
     if(usuarioEncontrado)
     {
-        
     //Ahora valido contraseñas, en caso de exito lo guardo en session
    
         if(usuarioEncontrado.contrasenia == req.body.contrasenia)
@@ -44,9 +43,7 @@ const userController = {
                     msg: "Credenciales invalidas!"
                 }
             }, oldData: req.body})
-                
         }
-        
     }
 
     return res.render('./users/login', {errors: {
@@ -54,8 +51,12 @@ const userController = {
             msg: "No se encontró este usuario en nuestro sistema!"
         }
     }})
-
+    },
     
+    logout: (req, res) =>{
+        res.clearCookie('mailCookie');
+        req.session.destroy();
+        return res.redirect('/')
     },
 
     viewRegister:(req,res)=>{
@@ -63,14 +64,21 @@ const userController = {
     },
 
     register:(req,res)=>{
+        if(req.body.contrasenia == req.body.contrasenia2){
+           let contraseñaEncriptada = bcript.hashSync(req.body.contraseña,12) 
+        }else{
+            return res.render('./users/register',{errors:{contrasenia:{msg:"Las contraseñas no coinciden"}}})
+        }
+        
         let usuario = {
             id:0,
             nombre:req.body.nombre,
             apellido:req.body.apellido,
-            contraseña:req.body.contraseña,
+            imagen:req.file.filename,
+            contraseña: contraseñaEncriptada, //aca deberia estar encriptado
             mail:req.body.email,
             telefono:req.body.telefono,
-            categoria:"cliente"
+            //categoria:"cliente"
         }
         users.create(usuario)
         res.redirect("/")
@@ -81,16 +89,8 @@ const userController = {
         res.render('./users/perfil', {usuarioDatos: req.session.usuarioLogeado});  
     },
 
-    homeAdmin: (req, res) => 
-    {
+    homeAdmin: (req, res) => {
         res.render('./users/homeAdmin')
-    },
-
-    logout: (req, res) =>
-    {
-        res.clearCookie('mailCookie');
-        req.session.destroy();
-        return res.redirect('/')
     }
 }
 
