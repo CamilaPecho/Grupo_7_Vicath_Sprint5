@@ -22,7 +22,7 @@ const userController = {
     if(usuarioEncontrado)
     {
     //Ahora valido contraseñas, en caso de exito lo guardo en session
-   
+    
         if(usuarioEncontrado.contrasenia == req.body.contrasenia)
         {
             console.log("entre pa");
@@ -64,10 +64,22 @@ const userController = {
     },
 
     register:(req,res)=>{
-        if(req.body.contrasenia == req.body.contrasenia2){
-           let contraseñaEncriptada = bcript.hashSync(req.body.contraseña,12) 
+
+        const resultadosValidaciones = validationResult(req);
+    
+        if(!resultadosValidaciones.isEmpty())
+        {
+            return res.render('./users/register', {errors: resultadosValidaciones.mapped()})
+        }
+
+        if(req.body.contrasenia == req.body.contrasenia2 ){
+            let contraseñaEncriptada = bcript.hashSync(req.body.contrasenia,12) 
         }else{
-            return res.render('./users/register',{errors:{contrasenia:{msg:"Las contraseñas no coinciden"}}})
+            return res.render('./users/register',{errors: {
+                contrasenia: {
+                    msg:"Las contraseñas no coinciden"
+                }
+            }})
         }
         
         let usuario = {
@@ -85,7 +97,7 @@ const userController = {
     },
 
     verPerfil:(req,res)=>{
-       
+        
         res.render('./users/perfil', {usuarioDatos: req.session.usuarioLogeado});  
     },
 

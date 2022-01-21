@@ -15,10 +15,10 @@
     <main class="register">
         <div>
         <form action="/register" method="post" class="continuar" enctype="multipart/form-data">
-             <h3>Registrate</h3>
+            <h3>Registrate</h3>
             <h4> <i class="fas fa-user-circle"></i> Datos Personales<br></h4>
             <div >
-                <input class="dato" type="file" name="avatar" id="avatar" accept=".jpg,.png" required> 
+                <input class="dato" type="file" name="avatar" id="avatar" accept=".jpg,.png" > 
             </div>
             <div >
                 <input class="dato" type="text" name="nombre" id="nombre" minlength="3" placeholder="Nombre" required> 
@@ -39,10 +39,12 @@
             </div>
             <div >
                 <input class="dato" type="password" name="contrasenia2" minlength="6" id="contrasenia2" placeholder="Confirmar Contraseña" required>
-            </div>
-            <div class="errorValidacion">
-                <%= errors.contrasenia.msg %> 
             </div> 
+            <% if (locals.errors && errors.contrasenia) { %>
+                <div class="errorValidacion">
+                    <%= errors.contrasenia.msg %> 
+                </div> 
+            <% } %>
             <div class = "botones">
                 <button class= "botonRegistro" type="submit"> enviar </button>
                 <button class= "botonRegistro" type="reset"> cancelar </button>
