@@ -23,7 +23,8 @@ const userController = {
     {
     //Ahora valido contraseñas, en caso de exito lo guardo en session
     
-        if(usuarioEncontrado.contrasenia == req.body.contrasenia)
+    let contraseniaOk = bcript.compareSync(req.body.contrasenia, usuarioEncontrado.contrasenia);
+        if(contraseniaOk)
         {
             console.log("entre pa");
             delete usuarioEncontrado.contrasenia;
@@ -34,6 +35,8 @@ const userController = {
             {
                 res.cookie("mailCookie", req.body.usuario, { maxAge: (1000 * 60) * 60 }) //guardamos sólo el mail porque con eso es suficiente pa buscar en la BD, además la cookie de este estilo tiene un limite de 4kb y hay q ser los más optimos posibles
             }
+            console.log("entrando a perfil")
+            
             return res.redirect('/profile')
         }
         else
