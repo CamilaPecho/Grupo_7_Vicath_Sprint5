@@ -70,7 +70,7 @@ const userController = {
 
     register:(req,res)=>{
 
-        let usuarioEncontrado = users.buscardorPorCategoriaIndividual('mail', req.body.usuario)
+        let usuarioEncontrado = users.buscardorPorCategoriaIndividual('mail', req.body.email)
 
         if(usuarioEncontrado){
             return res.render('./users/register',{errors: {
@@ -103,14 +103,14 @@ const userController = {
             id:0,
             nombre:req.body.nombre,
             apellido:req.body.apellido,
-            imagen:req.file.filename,
+            imagen:req.file? req.file.filename: "default.jpg",
             contraseña: contraseñaEncriptada, //aca deberia estar encriptado
             mail:req.body.email,
             telefono:req.body.telefono,
             //categoria:"cliente"
         }
         users.create(usuario)
-        res.redirect("/login")
+        res.redirect("/")
     },
 
     verPerfil:(req,res)=>{
