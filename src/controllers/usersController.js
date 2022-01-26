@@ -32,7 +32,9 @@ const userController = {
             //aca vemos si esta activo el checkbox de recordame, y si lo esta despierto mi cookie
             if(req.body.recordarme)
             {
-                res.cookie("mailCookie", req.body.usuario, { maxAge: (1000 * 60) * 60 }) //guardamos sólo el mail porque con eso es suficiente pa buscar en la BD, además la cookie de este estilo tiene un limite de 4kb y hay q ser los más optimos posibles
+                res.cookie("mailCookie", req.body.usuario, { maxAge: (1000 * 60) * 60 }) 
+                //guardamos sólo el mail porque con eso es suficiente pa buscar en la BD, 
+                //además la cookie de este estilo tiene un limite de 4kb y hay q ser los más optimos posibles
             }
             return res.redirect('/profile')
         }
@@ -65,6 +67,16 @@ const userController = {
 
     register:(req,res)=>{
 
+        let usuarioEncontrado = users.buscardorPorCategoriaIndividual('mail', req.body.usuario)
+
+        if(usuarioEncontrado){
+            return res.render('./users/register',{errors: {
+                email: {
+                    msg:"Este mail ya esta registrado"
+                }
+            }})
+        }
+
         const resultadosValidaciones = validationResult(req);
     
         if(!resultadosValidaciones.isEmpty())
@@ -72,8 +84,10 @@ const userController = {
             return res.render('./users/register', {errors: resultadosValidaciones.mapped()})
         }
 
+        let contraseñaEncriptada = 0
+
         if(req.body.contrasenia == req.body.contrasenia2 ){
-            let contraseñaEncriptada = bcript.hashSync(req.body.contrasenia,12) 
+            contraseñaEncriptada = bcript.hashSync(req.body.contrasenia,12) 
         }else{
             return res.render('./users/register',{errors: {
                 contrasenia: {
@@ -93,7 +107,7 @@ const userController = {
             //categoria:"cliente"
         }
         users.create(usuario)
-        res.redirect("/")
+        res.redirect("/login")
     },
 
     verPerfil:(req,res)=>{

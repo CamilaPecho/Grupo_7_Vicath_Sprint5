@@ -18,7 +18,7 @@
             <h3>Registrate</h3>
             <h4> <i class="fas fa-user-circle"></i> Datos Personales<br></h4>
             <div >
-                <input class="dato" type="file" name="avatar" id="avatar" accept=".jpg,.png" > 
+                <input class="dato" type="file" name="avatar" id="avatar" accept=".jpg,.png"> 
             </div>
             <div >
                 <input class="dato" type="text" name="nombre" id="nombre" minlength="3" placeholder="Nombre" required> 
@@ -42,7 +42,7 @@
             </div> 
             <% if (locals.errors && errors.contrasenia) { %>
                 <div class="errorValidacion">
-                    <%= errors.contrasenia.msg %> 
+                    <span><%= errors.contrasenia.msg %></span>
                 </div> 
             <% } %>
             <div class = "botones">

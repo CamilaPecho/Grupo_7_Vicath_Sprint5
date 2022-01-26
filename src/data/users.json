@@ -1,11 +1,20 @@
 [
  {
-    "id": 5,
-    "nombre": "Limbert",
-    "apellido": "Estrada",
-    "contrasenia": "@@@ZyXeL@@@",
-    "mail": "lvasquezestrada@frba.utn.edu.ar",
-    "telefono": "1139046424",
-    "categoria": "admin"
-   }
+  "id": 5,
+  "nombre": "Limbert",
+  "apellido": "Estrada",
+  "contrasenia": "@@@ZyXeL@@@",
+  "mail": "lvasquezestrada@frba.utn.edu.ar",
+  "telefono": "1139046424",
+  "categoria": "admin"
+ },
+ {
+  "id": 6,
+  "nombre": "candela",
+  "apellido": "ergas",
+  "imagen": "1643232392843_img_.png",
+  "contraseña": "$2a$12$srHvuZQojHWV1N7AtwMsiuZw9vw0ZXT/Z1nJd4Ks06uG6EDERKVua",
+  "mail": "kuroneko_nyaa@hotmail.com",
+  "telefono": "1163669194"
+ }
 ]
