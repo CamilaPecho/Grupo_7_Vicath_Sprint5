@@ -23,7 +23,7 @@ const userController = {
     {
     //Ahora valido contraseñas, en caso de exito lo guardo en session
     
-    let contraseniaOk = bcript.compareSync(req.body.contrasenia, usuarioEncontrado.contrasenia);
+    let contraseniaOk = bcript.compareSync(req.body.contrasenia, usuarioEncontrado.contraseña);
         if(contraseniaOk)
         {
             console.log("entre pa");
@@ -70,23 +70,25 @@ const userController = {
 
     register:(req,res)=>{
 
+        const resultadosValidaciones = validationResult(req);
+                
+            if(!resultadosValidaciones.isEmpty())
+            {
+                return res.render('./users/register', {errors: resultadosValidaciones.mapped(), datosViejos: req.body})
+            }
+
+
         let usuarioEncontrado = users.buscardorPorCategoriaIndividual('mail', req.body.email)
 
         if(usuarioEncontrado){
             return res.render('./users/register',{errors: {
                 email: {
                     msg:"Este mail ya esta registrado"
-                }
+                }, datosViejos: req.body
             }})
         }
 
-        const resultadosValidaciones = validationResult(req);
-    
-        if(!resultadosValidaciones.isEmpty())
-        {
-            return res.render('./users/register', {errors: resultadosValidaciones.mapped()})
-        }
-
+       
         let contraseñaEncriptada;
 
         if(req.body.contrasenia == req.body.contrasenia2 ){
@@ -95,7 +97,7 @@ const userController = {
             return res.render('./users/register',{errors: {
                 contrasenia: {
                     msg:"Las contraseñas no coinciden"
-                }
+                }, datosViejos: req.body
             }})
         }
         
@@ -111,7 +113,7 @@ const userController = {
         }
         console.log(usuario);
         users.create(usuario)
-        res.redirect("/")
+        res.redirect("/login")
     },
 
     verPerfil:(req,res)=>{
