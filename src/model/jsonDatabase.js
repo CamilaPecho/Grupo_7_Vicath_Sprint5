@@ -25,7 +25,7 @@ const modelController = function (name) {
             let rows = this.readFile();
             let lastRow = rows.pop();
 
-            return lastRow.id ? ++lastRow.id : 1;
+            return lastRow ? ++lastRow.id : 1;
         },
         // Leo todos los registros del archivo
         all: function () {
@@ -42,6 +42,7 @@ const modelController = function (name) {
         create: function (row) {
             let rows = this.readFile();
             // Averiguo el último id y lo actualizo
+            console.log(row.id);
             row.id = this.nextId();
             // Agrego en el array
             rows.push(row);

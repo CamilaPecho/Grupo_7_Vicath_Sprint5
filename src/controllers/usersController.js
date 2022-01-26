@@ -87,7 +87,7 @@ const userController = {
             return res.render('./users/register', {errors: resultadosValidaciones.mapped()})
         }
 
-        let contraseñaEncriptada = 0
+        let contraseñaEncriptada;
 
         if(req.body.contrasenia == req.body.contrasenia2 ){
             contraseñaEncriptada = bcript.hashSync(req.body.contrasenia,12) 
@@ -100,15 +100,16 @@ const userController = {
         }
         
         let usuario = {
-            id:0,
+            id: 0,
             nombre:req.body.nombre,
             apellido:req.body.apellido,
             imagen:req.file.filename,
-            contraseña: contraseñaEncriptada, //aca deberia estar encriptado
+            contrasenia: contraseñaEncriptada, //aca deberia estar encriptado
             mail:req.body.email,
             telefono:req.body.telefono,
             //categoria:"cliente"
         }
+        console.log(usuario);
         users.create(usuario)
         res.redirect("/login")
     },
