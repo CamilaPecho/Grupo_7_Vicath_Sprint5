@@ -66,7 +66,8 @@ main section article img{
 article.articuloClass{
     width: 90%;
     margin: 5px auto;
-    
+    position: relative;
+    padding-bottom: 45px;
     background-color: #F3F0D7;
     border-radius: 10px;
     transition: all 0.3s;
