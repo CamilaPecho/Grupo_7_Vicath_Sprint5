@@ -38,8 +38,14 @@ const userController = {
                 //además la cookie de este estilo tiene un limite de 4kb y hay q ser los más optimos posibles
             }
             console.log("entrando a perfil")
+            if(usuarioEncontrado.rol == "admin")
+            {
+                return res.redirect('/homeAdmin')
+            }
+            else{
+                return res.redirect('/profile')
+            }
             
-            return res.redirect('/profile')
         }
         else
         {
@@ -109,6 +115,7 @@ const userController = {
             contrasenia: contraseniaEncriptada, //aca deberia estar encriptado
             mail:req.body.email,
             telefono:req.body.telefono,
+            rol: "cliente"
             //categoria:"cliente"
         }
         console.log(usuario);
@@ -130,8 +137,13 @@ const userController = {
         res.render('./users/perfil', {usuarioDatos: req.session.usuarioLogeado});  
     },
 
+    verPerfilAdmin:(req,res)=>{
+        
+        res.render('./users/perfilAdmin', {usuarioDatos: req.session.usuarioLogeado});  
+    },
+
     homeAdmin: (req, res) => {
-        res.render('./users/homeAdmin')
+        res.render('./users/homeAdmin', {usuarioDatos: req.session.usuarioLogeado})
     }
 }
 

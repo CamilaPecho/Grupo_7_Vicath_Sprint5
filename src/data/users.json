@@ -1,11 +1,22 @@
 [
  {
   "id": 1,
-  "nombre": "Limberth",
+  "nombre": "Daniel",
   "apellido": "Estrada",
   "imagen": "1643286504866_img_.jpg",
   "contrasenia": "$2a$12$V/2QEAU8VCZ7zKoLwSGlk.QKzzlYZnM1cri/9vYTEN8BUxx1npATS",
   "mail": "limberth.estrada@gmail.com",
-  "telefono": "1139046424"
+  "telefono": "1139046424",
+  "rol": "cliente"
+ },
+ {
+  "id": 2,
+  "nombre": "Limberth",
+  "apellido": "Estrada",
+  "imagen": "1643289051497_img_.jpg",
+  "contrasenia": "$2a$12$.2D1IED4duKqxdR7RpIjnO9F27rdyMq3aXlDC8N4yHwwuwBYwXmzO",
+  "mail": "lvasquezestrada@frba.utn.edu.ar",
+  "telefono": "1139046424",
+  "rol": "admin"
  }
 ]
