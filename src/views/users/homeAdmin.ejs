@@ -13,7 +13,7 @@
     <header>
         <div class="top-header">
         <div class= "logo">
-            <a href="/" class="contenedorEnlace"><img class="imagen-logo" src="../images/logo.png" alt="Logo de pagina"></a>
+            <a href="/homeAdmin" class="contenedorEnlace"><img class="imagen-logo" src="../images/logo.png" alt="Logo de pagina"></a>
         </div>
         
         <div class="iconosHeader">
@@ -25,9 +25,9 @@
             <div class="login_desplegable">
                 <% if (locals.usuarioHeader) { %>
                     <span class="login_desplegable_header">¡Hola! <%= locals.datosUsuarioGlobal.nombre %> </span>
-                <a href="/profileAdmin" class="login_desplegable_perfil">Ver perfil</a><hr>
-                <a href="#" class="login_desplegable_edit">Editar perfil</a><hr>
-                <a href="/logout" class="login_desplegable_close">Cerrar cuenta</a>
+                <a href="/profileAdmin" class="login_desplegable_perfil">Ver perfil<i class="fas fa-eye" style="user-select: auto;"></i></a><hr>
+                <a href="#" class="login_desplegable_edit">Editar perfil<i class="fas fa-shield-alt" style="user-select: auto;"></i></a><hr>
+                <a href="/logout" class="login_desplegable_close">Cerrar cuenta<i class="fas fa-sign-out-alt"></i></a>
                 <% } else{%>
     
                 <span class="login_desplegable_header">¡Elija!</span>
@@ -67,7 +67,7 @@
                 </a>
             </div>
             <div class="cont-button">
-                <a href="/">
+                <a href="/modocliente">
                     <button type="button" class="botonHome">Iniciar vista cliente</button>
                 </a>
             </div>

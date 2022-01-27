@@ -3,12 +3,17 @@ const {validationResult} = require('express-validator');
 const users = jsonDB('users');
 const bcript = require('bcryptjs');
 
+
+const productModel = jsonDB('productos'); //le mandamos la referencia a nuestro archivo JSON
+
 const userController = {
     viewLogin: (req,res) =>{
         res.render('./users/login')
     },
 
     login: (req,res) =>{
+    
+
     const resultadosValidaciones = validationResult(req);
     
     if(!resultadosValidaciones.isEmpty())
@@ -133,8 +138,12 @@ const userController = {
     },
 
     verPerfil:(req,res)=>{
+        if(req.session.usuarioLogeado.rol == "admin")
+        {
+            return res.redirect('profileAdmin');
+        }
+        else{res.render('./users/perfil', {usuarioDatos: req.session.usuarioLogeado});}
         
-        res.render('./users/perfil', {usuarioDatos: req.session.usuarioLogeado});  
     },
 
     verPerfilAdmin:(req,res)=>{
@@ -144,6 +153,16 @@ const userController = {
 
     homeAdmin: (req, res) => {
         res.render('./users/homeAdmin', {usuarioDatos: req.session.usuarioLogeado})
+    },
+
+    modoCliente: (req, res) => {
+        const destacados = productModel.buscardorPorCategoria("category", "destacados");
+        const ofertas = productModel.buscardorPorCategoria("category", "ofertas");
+        const novedades = productModel.buscardorPorCategoria("category", "novedades");
+        
+        
+            res.render("home", {destacados, ofertas, novedades})
+        
     }
 }
 

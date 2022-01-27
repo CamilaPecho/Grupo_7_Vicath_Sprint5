@@ -6,6 +6,7 @@ const cookies = require('cookie-parser');
 
 //Solicitud de middlewares
 const usuarioLogeadoGlobal = require('./src/middlewares/usuarioLogeadoGlobal.js')
+const adminMiddleware = require('./src/middlewares/adminMiddleware')
 
 //Importamos el sistema de rooteo 😂 
 const main = require("./src/routers/main");
@@ -37,7 +38,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
 //Establecimiento de recursos genericos =================================================
-app.use("/", main);
+app.use("/",main);
 app.use('/', users);
 app.use('/products', products);
 //=======================================================================================

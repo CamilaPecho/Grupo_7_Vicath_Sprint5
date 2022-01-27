@@ -6,6 +6,7 @@ const validacionesRegister = require('../middlewares/validationsRegister.js');
 const avatarProfile = require('../middlewares/imageRegister.js');
 const guestMiddleware = require('../middlewares/guestMiddleware.js');
 const authMiddleware = require('../middlewares/authMiddleware.js')
+const adminMiddleware = require('../middlewares/adminMiddleware.js')
 
 router.get('/login', guestMiddleware, userController.viewLogin);
 router.post('/login', validacionesLogin, userController.login)
@@ -14,9 +15,11 @@ router.get('/register', guestMiddleware, userController.viewRegister);
 router.post('/register',avatarProfile.single('avatar'),validacionesRegister, userController.register);
 
 router.get('/profile', authMiddleware, userController.verPerfil)
-router.get('/profileAdmin', authMiddleware, userController.verPerfilAdmin)
+router.get('/profileAdmin', adminMiddleware, userController.verPerfilAdmin)
 
-router.get('/homeAdmin', authMiddleware ,userController.homeAdmin)
+router.get('/modocliente', userController.modoCliente)
+
+router.get('/homeAdmin',  adminMiddleware, userController.homeAdmin)
 
 router.get('/logout', userController.logout)
 

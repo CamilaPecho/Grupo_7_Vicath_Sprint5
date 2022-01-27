@@ -18,5 +18,15 @@
   "mail": "lvasquezestrada@frba.utn.edu.ar",
   "telefono": "1139046424",
   "rol": "admin"
+ },
+ {
+  "id": 3,
+  "nombre": "Adela",
+  "apellido": "Cervantes",
+  "imagen": "1643321253460_img_.jpg",
+  "contrasenia": "$2a$12$rWqLNkZ9AGnFPDo4egKXdeyIyNlM9PFTGS03MouFSw6hLS3tUaqFS",
+  "mail": "mercadopago@gmail.com",
+  "telefono": "1164911810",
+  "rol": "cliente"
  }
 ]
