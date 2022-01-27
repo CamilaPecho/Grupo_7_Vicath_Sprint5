@@ -1,5 +1,5 @@
-const {body, param} = require('express-validator');
-const { patch } = require('../routers/users');
+const {body} = require('express-validator');
+
 const path = require('path');
 
 const errors = [

@@ -23,7 +23,7 @@ const userController = {
     {
     //Ahora valido contraseñas, en caso de exito lo guardo en session
     
-    let contraseniaOk = bcript.compareSync(req.body.contrasenia, usuarioEncontrado.contraseña);
+    let contraseniaOk = bcript.compareSync(req.body.contrasenia, usuarioEncontrado.contrasenia);
         if(contraseniaOk)
         {
             console.log("entre pa");
@@ -81,24 +81,24 @@ const userController = {
         let usuarioEncontrado = users.buscardorPorCategoriaIndividual('mail', req.body.email)
 
         if(usuarioEncontrado){
+            console.log("test")
+            console.log(req.body)
             return res.render('./users/register',{errors: {
-                email: {
-                    msg:"Este mail ya esta registrado"
-                }, datosViejos: req.body
-            }})
+                email: { msg:"Este mail ya esta registrado" }}, datosViejos: req.body
+            })
         }
 
        
-        let contraseñaEncriptada;
+        let contraseniaEncriptada;
 
         if(req.body.contrasenia == req.body.contrasenia2 ){
-            contraseñaEncriptada = bcript.hashSync(req.body.contrasenia,12) 
+            contraseniaEncriptada = bcript.hashSync(req.body.contrasenia,12) 
         }else{
             return res.render('./users/register',{errors: {
                 contrasenia: {
                     msg:"Las contraseñas no coinciden"
-                }, datosViejos: req.body
-            }})
+                }
+            }, datosViejos: req.body})
         }
         
         let usuario = {
@@ -106,13 +106,22 @@ const userController = {
             nombre:req.body.nombre,
             apellido:req.body.apellido,
             imagen:req.file? req.file.filename: "default.jpg",
-            contraseña: contraseñaEncriptada, //aca deberia estar encriptado
+            contrasenia: contraseniaEncriptada, //aca deberia estar encriptado
             mail:req.body.email,
             telefono:req.body.telefono,
             //categoria:"cliente"
         }
         console.log(usuario);
         users.create(usuario)
+
+        /*
+        //A pedido de camila---
+        let usuarioRegisterSession = users.buscardorPorCategoriaIndividual('mail', usuario.mail)
+        //delete usuarioRegisterSession.contrasenia; //por temas de seguridad xd
+        req.session.usuarioLogeado = usuarioRegisterSession;
+        console.log("testing")
+        console.log(req.session.usuarioLogeado);
+        */
         res.redirect("/login")
     },
 
