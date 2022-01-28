@@ -320,5 +320,18 @@
   "tipo": "",
   "modelo": "",
   "material": ""
+ },
+ {
+  "id": 21,
+  "title": "AAA",
+  "price": "123456",
+  "category": "novedades",
+  "description": "asdadsad",
+  "image": [
+   "1643377454623_img_.jpg",
+   "1643377454649_img_.jpg",
+   "1643377454651_img_.jpg",
+   "1643377454655_img_.jpg"
+  ]
  }
 ]

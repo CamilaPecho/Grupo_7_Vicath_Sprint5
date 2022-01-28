@@ -7,6 +7,6 @@ function adminMiddleware(req, res, next){
            return res.redirect('/');
        } 
 }
-    next()
+    next(); //si tiene admin va por aca
 }
 module.exports = adminMiddleware;
